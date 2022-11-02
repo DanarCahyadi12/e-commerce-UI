@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayur Planet</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="navbar bg-base-300">
+        <div class="flex-1">
+          <a class="normal-case text-xl ml-4">Sayur Planet</a>
+        </div>
+        <div class="flex-none">
+          <div class="dropdown dropdown-end mr-3">
+            <label tabindex="0" class="btn btn-ghost btn-circle cart-btn">
+              <div class="indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                <span class="badge badge-sm indicator-item">4</span>
+              </div>
+            </label>
+            <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
+              <div class="card-body">
+                <span class="text-lg italic">8 Sayur</span>
+                <div class="card-actions">
+                  <label class="btn btn-primary btn-block view-cart">Lihat keranjang</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown dropdown-end mr-20">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="../assets/images/user.png" />
+              </div>
+            </label>
+            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-search flex justify-center w-full h-96 ">
+          <input type="text" placeholder="Cari Sayur" class="input input-bordered input-xs w-3/6 w-7 p-4 self-center  " />
+      </div>
+
+      <div class="dropdown dropdown-hover sort-dropdown">
+        <label tabindex="0" class="btn m-1">Urutkan <br>berdasarkan</label>
+        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a>Harga murah</a></li>
+          <li><a>Harga mahal</a></li>
+        </ul>
+      </div>
+      
+      <div class="container-products mt-16 p-7 flex flex-wrap gap-5">
+      </div>
+
+      
+      <input type="checkbox" id="detail-card" class="modal-toggle" />
+      <div class="bg-base-100 shadow-xl modal sm:modal-middle ">
+        <div class="card-body modal-box">
+          <figure><img src="../assets/images/cabai.jpg" alt="Movie " class="w-32 justify-center m-auto image-products"/></figure>
+          <h2 class="card-title text-2xl mb-2 justify-center title-products"></h2>
+          <h3>Harga :</h3>
+          <p class="price text-xs"></p>
+          <p class="quantity text-xs"></p>
+          <div class="price-by-quantity-cont">
+            <h1 class="mt-12">Total belanja :</h1>
+            <h4 class="price-by-quantity text-2xl "></h4>
+            <h2 class="quantity text-xl mt-2"></h2>
+          </div>
+          <div class="btn-group mt-2 group-quantity">
+            <button class="btn btn-xs"></button>
+          </div>
+          <div class="quantity-products">
+            <input type="number" placeholder="Jumlah" class="input input-bordered input-sm w-54 max-w-xs mt-3 quantity-input" min="1" value="1"/>
+          </div>
+          <div class="card-actions modal-action mt-4">
+            <label class="btn btn-primary buy-btn">Beli sekarang</label>
+            <label for="" class="btn btn-primary cart-button"><span class="material-symbols-outlined">shopping_cart</span></label>
+            <label for="detail-card" class="btn btn-primary cancel-btn">Cancel</label>
+          </div>
+        </div>
+      </div>  
+      
+  
+
+    <script src="./script.js"></script>
+</body>
+</html>
